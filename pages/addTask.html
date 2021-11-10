@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/mobile.css">
+   
+    <title>addTask</title>
+</head>
+<body onload="init()">
+
+    <div id="outerDivCanvanBoard">
+        <div w3-include-html="/templates/sidebar.html"> </div> 
+        <div id="popUpNewTask">
+            <div id="rowBox">
+                <div id="leftRow">
+                    <div class="formElement">
+                        <label for="title"> Titel </label>
+                        <input class="inputField" type="text" id="title" name="title" placeholder="Task Title...">
+                    </div>
+
+                    <div class="formElement">
+                        <label for="category"> Kategorie </label>
+                        <select class="inputField" id="category" name="category">
+                            <option value="Design"> Design</option>
+                            <option value="usability">Benutzerfreundlichkeit</option>
+                            <option value="performance">Performance</option>
+                        </select>
+                    </div>
+
+                    <div class="formElement">
+                        <label for="description"> Beschreibung </label>
+                        <textarea class="inputField" type="text" id="description" name="description"
+                            placeholder="descripe the task..."></textarea>
+                    </div>
+                </div>
+                <div id="rightRow">                    
+                    <div class="formElement">
+                        <label for="date"> Fällig am: </label>
+                        <input class="inputField" type="date" id="date" name="date">
+                    </div>
+                    
+                    <div class="formElement">
+                        <label for="urgency"> Priorität </label>
+                        <select class="inputField" id="urgancy" name="urgancy">
+                            <option value="Design"> Hoch</option>
+                            <option value="usability">Standard</option>
+                            <option value="performance">Niedrig</option>
+                        </select>
+                    </div>
+
+                    <div class="formElement">
+                        <label for="teamMember"> Person hinzfügen: </label>
+                        <div id="frameMembers">
+                            <div id="boxTeamMember">
+                                <div class="teamMember displayNone" id="philip">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p>Philip</p>                               
+                                </div>
+                                <div class="teamMember displayNone" id="robin">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p> Robin</p>
+                                </div>                            
+                                <div class="teamMember displayNone" id="alex">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p> Alex</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i id="addTeamMember" class="fas fa-plus-circle"></i>
+                            </div>                                 
+                        </div>
+                    </div>
+                    <div id="buttonBox">
+                        <button id="cancelButton"> Abbrechen </button>
+                        <button id="submitBtnNewTask" type="submit" onclick="saveTask()"> Task erstellen! </button>
+                    </div> 
+                </div>                
+            </div>
+
+        </div>    
+    </div>
+
+
+ 
+    <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/mini_backend.js"></script>  
+    <script src="/JavaScript/templates.js"></script>  
+    <script> setURL('http://gruppe-124.developerakademie.net/smallest_backend_ever/')</script>
+    <script src="https://kit.fontawesome.com/36c389de7e.js" crossorigin="anonymous"></script>
+</body>
+</html>

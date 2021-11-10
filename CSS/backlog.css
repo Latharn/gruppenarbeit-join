@@ -1,0 +1,27 @@
+#tasksOuterDiv {
+    width: 100%;    
+    display: flex;        
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    column-gap: 1rem;
+    row-gap: 1rem; 
+     
+}
+.tasksAtBacklog {
+    border: 1px solid gray;
+    padding: 1rem;
+    
+}
+
+#buttonBox {
+    display: flex;
+    justify-content: center;
+}
+
+#backlogTasks {
+    width: 100%;
+    
+}
+

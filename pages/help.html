@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/mobile.css">
+    <title>help</title>
+</head>
+<body onload="init()">
+
+    <div id="outerDivCanvanBoard">
+    <div w3-include-html="/templates/sidebar.html"> </div> 
+
+    <button onclick="loadTestToBackend()"> ins Backend laden ( siehe console) </button>
+    <button onclick="loadTestFromBackend()"> aus Backend laden </button>
+
+    <p id="backendResult"></p>
+
+    </div>
+    
+
+    
+
+
+
+
+
+    <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/mini_backend.js"></script>
+    <script src="/JavaScript/templates.js"></script>
+    <script src="/JavaScript/mini_backend.js"></script>
+    <script> setURL('http://gruppe-124.developerakademie.net/smallest_backend_ever/')</script>
+</body>  
+</html>

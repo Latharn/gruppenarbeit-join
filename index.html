@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/mobile.css">
+
+    <title>join</title>
+</head>
+
+<body onload="init()">
+
+    <div id="outerDivCanvanBoard">
+
+        <!-- <div w3-include-html="templates/sidebar.html"></div>         -->
+        <div w3-include-html="./templates/sidebar.html"></div>        
+
+        <div id="content">
+            <div id="canvanBoard">
+                <div class="canvanColumns" id="columnTodo">
+                    <h2>todo</h2>
+                    <div id="todo"></div>
+
+                </div>
+                <div class="canvanColumns" id="columnInprogress">
+                    <h2>in progress</h2>
+
+
+                </div>
+                <div class="canvanColumns" id="columnTesting">
+                    <h2>testing</h2>
+
+                </div>
+                <div class="canvanColumns" id="columnDone">
+                    <h2>done</h2>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./JavaScript/script.js"></script>    
+    <script src="./JavaScript/templates.js"></script>
+    <script src="./JavaScript/mini_backend.js"></script>
+    <script> setURL('http://gruppe-124.developerakademie.net/smallest_backend_ever/')</script>
+    <script src="https://kit.fontawesome.com/36c389de7e.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
