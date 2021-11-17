@@ -39,13 +39,11 @@ function getAllTasks() {
          let id = task._id;
          div.innerHTML += `
             <div class="tasksAtBacklog" id="${id}">
-                <div>Titel: ${task._title} </div>
-                <div> Kategorie: ${task._category} </div>
-                <div> Beschreibung ${task._description} </div>
-                <div> Priorität: ${task._urgancy} </div>
-                <div> Datum: ${task._date} </div>
-                <div> Personen ${task._user} </div>
-                <div> Task-ID: ${task._id} </div>
+                <div class="taskLog">
+                    <div> ${task._user} </div>
+                    <div> ${task._category} </div>
+                    <div> ${task._description} </div>
+                </div>   
             </div>           
          `
      });

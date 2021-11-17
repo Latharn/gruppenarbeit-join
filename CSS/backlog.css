@@ -1,18 +1,18 @@
 #tasksOuterDiv {
-    width: 100%;    
-    display: flex;        
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5rem;
+    width: 85vw;    
+    display: flex;
+    flex-direction: column;        
     column-gap: 1rem;
-    row-gap: 1rem; 
-     
+    row-gap: 1rem;  
 }
 .tasksAtBacklog {
+    background-color: rgba(227, 235, 255, 1);
     border: 1px solid gray;
     padding: 1rem;
-    
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 #buttonBox {
@@ -25,3 +25,35 @@
     
 }
 
+.dashboard {
+    margin-left: 24px;
+}
+
+.dashboard p {
+    margin: 0px;
+    color: #203192;
+}
+
+.dashboard h1 {
+    margin-bottom: 0px;
+}
+
+.taskLog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskLog div {
+    width: 33%;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'PT Sans', sans-serif;
+    color: #203192;
+}
+
+.titles span {
+    width: 33%;
+}
