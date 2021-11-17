@@ -202,3 +202,9 @@ label {
 #addTaskLi{
     cursor: pointer;
 }
+
+.boardTask {
+    border: 1px gray solid;
+    padding: 1rem;
+    margin: 1rem;
+}

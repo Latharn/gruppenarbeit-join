@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,29 +11,41 @@
 
     <title>Backlog</title>
 </head>
+
 <body onload="init()">
 
     <div id="outerDivCanvanBoard">
-        <div w3-include-html="/templates/sidebar.html"> </div> 
+        <div w3-include-html="/templates/sidebar.html"> </div>
         <div class="dashboard">
             <div>
                 <h1>Backlog</h1>
                 <p>Learning Management System Project</p>
+                <p>
+                    <b> Um einen Task vom Backlog auf das Board zu bekommen muss man auf den Task klicken -
+                        es sind nur die Tasks auf dem Board auf die im Backlog geklickt wurde. Tasks die auch auf dem
+                        Board sind werden im Backlog grün angezeigt</b>
+                </p>
             </div>
             <div id="backlogTasks">
                 <div class="titles">
-                    <span><h2>ASSIGNED TO</h2></span>
-                    <span><h2>CATEGORY</h2></span>
-                    <span><h2>DETAILS</h2></span>
+                    <span>
+                        <h2>ASSIGNED TO</h2>
+                    </span>
+                    <span>
+                        <h2>CATEGORY</h2>
+                    </span>
+                    <span>
+                        <h2>DETAILS</h2>
+                    </span>
                 </div>
                 <div id="tasksOuterDiv"></div>
-                <div id="buttonBox">       
+                <div id="buttonBox">
                     <button id="delteTasks"> alle Tasks aus Backend löschen!</button>
-                </div>       
-            </div> 
-        </div>    
+                </div>
+            </div>
+        </div>
     </div>
-    
+
 
     <script src="/JavaScript/backlog.js"></script>
     <script src="/JavaScript/mini_backend.js"></script>
@@ -41,4 +54,5 @@
     <script src="https://kit.fontawesome.com/36c389de7e.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
