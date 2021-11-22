@@ -35,7 +35,7 @@ function printBoardTask() {
 
 function insertBoardHTML(task) {
     return `
-        <div class="boardTask">
+        <div draggable="true" ondragstart="startDragging()" class="boardTask">
             <div> ${task._title} </div>
             <div> ${task._description}</div>
             <div> ${task._category} </div>
@@ -43,3 +43,7 @@ function insertBoardHTML(task) {
             <div> ${task._user}</div>    
         </div>`
 }
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
