@@ -76,7 +76,7 @@ function saveTask() {
     let urgancy = document.getElementById('urgancy').value;
     let user = memberAddTask;
     let id = title.replace(/\s/g, "") + Math.round(Math.random() * 10);  // title + randomNumber without whitespaces
-    let newTask = { _title: title, _category: category, _description: description, _date: date, _urgancy: urgancy, _user: user, _id: id};
+    let newTask = { _createdAt: new Date().getTime(), _list : 'todo', _title: title, _category: category, _description: description, _date: date, _urgancy: urgancy, _user: user, _id: id};
     
     if(tasks==null){
         tasks = [newTask];
