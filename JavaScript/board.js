@@ -28,7 +28,7 @@ function filterTasksForBoard() {
 
 function printBoardTask() {
 
-    let todos = allTasksWithBoardYes.filter(t => t['list'] == 'todo');
+    let todos = allTasksWithBoardYes.filter(t => t['_list'] == 'todo');
 
     let todoDiv = document.getElementById('todo');
     todoDiv.innerHTML = "";
@@ -36,21 +36,21 @@ function printBoardTask() {
         todoDiv.innerHTML += insertBoardHTML(todo);
     });
 
-    let inprogress = allTasksWithBoardYes.filter(t => t['list'] == 'inprogress');
+    let inprogress = allTasksWithBoardYes.filter(t => t['_list'] == 'inprogress');
 
     let inprogressDiv = document.getElementById('inprogress');
     inprogressDiv.innerHTML = "";
     inprogress.forEach(inprogress => {
         inprogressDiv.innerHTML += insertBoardHTML(inprogress);
     });
-    let testing = allTasksWithBoardYes.filter(t => t['list'] == 'testing');
+    let testing = allTasksWithBoardYes.filter(t => t['_list'] == 'testing');
 
     let testingDiv = document.getElementById('testing');
     testingDiv.innerHTML = "";
     testing.forEach(testing => {
         testingDiv.innerHTML += insertBoardHTML(testing);
     });
-    let done = allTasksWithBoardYes.filter(t => t['list'] == 'done');
+    let done = allTasksWithBoardYes.filter(t => t['_list'] == 'done');
 
     let doneDiv = document.getElementById('done');
     doneDiv.innerHTML = "";
@@ -91,7 +91,7 @@ async function drop(ev, list) {
 
     let task = allTasksWithBoardYes.find(task => task._createdAt === currentDrag);
     task.list = list;
-    //await backend.setItem('Tasks', JSON.stringify(item));
+    await backend.setItem('Tasks', JSON.stringify(allTasks));
     saveTask();
     pushTaskJSONToServer();
     printBoardTask();

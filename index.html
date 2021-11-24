@@ -22,23 +22,23 @@
 
         <div id="content">
             <div id="canvanBoard">
-                <div class="canvanColumns" id="columnTodo"ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="canvanColumns" id="columnTodo"ondrop="drop(event,'todo')" ondragover="allowDrop(event,'todo')">
                     <h2>todo</h2>
                     <div id="todo"></div>
 
                 </div>
-                <div class="canvanColumns" id="columnInprogress"ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="canvanColumns" id="columnInprogress"ondrop="drop(event,'inprogress')" ondragover="allowDrop(event,'inprogress')">
                     <h2>in progress</h2>
 <div id="inprogress"></div>
 
                 </div>
-                <div class="canvanColumns" id="columnTesting"ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="canvanColumns" id="columnTesting"ondrop="drop(event,'testing')" ondragover="allowDrop(event,'testing')">
                     <h2>testing</h2>
 <div id="testing"></div>
                 </div>
-                <div class="canvanColumns" id="columnDone"ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="canvanColumns" id="columnDone"ondrop="drop(event,'done')" ondragover="allowDrop(event,'done')">
                     <h2>done</h2>
-<div id="done "></div>
+<div id="done"></div>
                 </div>
             </div>
 
