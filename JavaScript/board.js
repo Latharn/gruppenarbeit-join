@@ -12,7 +12,7 @@ async function init() {
 setTimeout(getAllTasks, 500);
 function getAllTasks() {
     let allTasksasString = backend.getItem('Tasks');
-    allTasks = JSON.parse(allTasksasString);
+    allTasks = JSON.parse(allTasksasString)||[];
     console.log(allTasks);
     filterTasksForBoard();
 }
@@ -92,7 +92,7 @@ async function drop(ev, list) {
     let task = allTasksWithBoardYes.find(task => task._createdAt === currentDrag);
     task.list = list;
     await backend.setItem('Tasks', JSON.stringify(allTasks));
-    saveTask();
+    saveTask(event);
     pushTaskJSONToServer();
     printBoardTask();
 }
